@@ -1,19 +1,10 @@
 import React from 'react';
-import {SafeAreaView, ScrollView, View} from 'react-native';
 // import Cards from './components/Cards';
-import PasswordGenerator from './components/PasswordGenerator';
+// import PasswordGenerator from './components/PasswordGenerator';
+import BgChanger from './components/BgChanger/BgChanger';
 
 function App(): React.JSX.Element {
-  return (
-    <SafeAreaView>
-      <ScrollView>
-        <View>
-          {/* <Cards /> */}
-          <PasswordGenerator />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
+  return <BgChanger />;
 }
 
 export default App;
