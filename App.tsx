@@ -1,18 +1,20 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import {SafeAreaView, ScrollView, StyleSheet, Text} from 'react-native';
+import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
+import ActionCard from './components/ActionCard';
+import ElevatedCards from './components/ElevatedCards';
+import FancyCard from './components/FancyCard';
+import FlatCards from './components/FlatCards';
+import ContactList from './components/ContactList';
 
 function App(): React.JSX.Element {
   return (
     <SafeAreaView>
       <ScrollView>
-        <Text>App</Text>
+        <ContactList />
+        <FlatCards />
+        <ElevatedCards />
+        <FancyCard />
+        <ActionCard />
       </ScrollView>
     </SafeAreaView>
   );
