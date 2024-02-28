@@ -28,6 +28,8 @@ const BgChanger = () => {
             <Text style={styles.actionBtnText}>Press me</Text>
           </View>
         </TouchableOpacity>
+
+        <Text>{backgroundColor}</Text>
       </View>
     </>
   );
