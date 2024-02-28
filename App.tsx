@@ -10,12 +10,21 @@ import {
 // import Cards from './components/Cards';
 // import PasswordGenerator from './components/PasswordGenerator';
 // import BgChanger from './components/BgChanger/BgChanger';
+
+import ReactNativeHapticFeedback from 'react-native-haptic-feedback';
+
 import Five from './assets/Five.png';
 import Four from './assets/Four.png';
 import One from './assets/One.png';
 import Six from './assets/Six.png';
 import Three from './assets/Three.png';
 import Two from './assets/Two.png';
+
+// Optional configuration
+const options = {
+  enableVibrateFallback: true,
+  ignoreAndroidSystemSettings: false,
+};
 
 type DiceProps = PropsWithChildren<{
   imageUrl: ImageSourcePropType;
@@ -62,6 +71,9 @@ function App(): JSX.Element {
       default:
         setDiceImage(One);
     }
+
+    // Trigger haptic feedback
+    ReactNativeHapticFeedback.trigger('impactLight', options);
   };
   return (
     <View style={styles.container}>
